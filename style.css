@@ -1,0 +1,472 @@
+@import url(/utility.css);
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    user-select: none;
+    text-decoration: none;
+    outline: none;
+}
+
+:root{
+    --color-primary:#1e5afa;
+    --color-primary-variant:rgba(0,0,240,0.2);
+    --color-white:#ffffff;
+    --color-light:#f4f4f4;
+    --color-black:#000f37;
+    --color-dark:#575757;
+
+    --bottom-section-padding:12rem;
+    --bottom-section-padding-mobile:8rem;
+
+    --transition:all 400ms ease;
+
+    --container-width:84%;
+    --container-width-tablet:90%;
+    --container-width-phone:94%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: pp-r;
+    font-size: 0.9rem;
+    overflow-x: hidden;
+    color: var(--color-dark) !important;
+    line-height: 1.7rem;
+    background: var(--color-white);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+
+h1{
+    font-size: 5.6rem;
+    line-height: 6rem;
+    font-family: pp-bold;
+    color: var(--color-black);
+}
+
+h2{
+    font-size: 3rem;
+    line-height: 1rem;
+    color: var(--color-black);
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.lead{
+    width: 63%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 1.5rem auto 3rem;
+}
+
+a{
+    color: var(--color-white);
+    font-weight: 300;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.3rem;
+    background: var(--color-white);
+    color: var(--color-white);
+    font-weight: 500;
+    border-radius: 0.4rem;
+    transition: all 300ms ease;
+}
+
+
+.btn-primary{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid transparent;
+    transition: all 300ms ease;
+}
+
+.btn-primary:hover{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-black);
+}
+
+.avatar{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.section{
+    max-width: 100vw;
+    padding-bottom: var(--bottom-section-padding);
+}
+
+.cb{
+    color: var(--color-black);
+}
+
+
+/* --------------- Nav -------------------- */
+
+.container{
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+nav{
+    background: var(--color-primary);
+    width: 100vw;
+    height: 6rem;
+    place-items: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    display: grid;
+    z-index: 2;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.nav_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav button{
+    display: none;
+}
+
+.nav_container ul{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    font-size: 1rem;
+    font-family: pp-r;
+}
+
+.nav_signin_signup{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav_logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: pp-bold;
+}
+
+
+
+/* ------------ Header Section ------------- */
+
+header{
+    padding-top: 7rem;
+    background: url(/assets/hero-bg.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    background-position: center;
+    background-size: cover;
+}
+
+.header_socials img{
+    /* background-color: var(--color-white); */
+    position: absolute;
+    width: 2rem;
+    height: 6rem;
+    top: 10rem;
+    left: 10rem;
+    padding: 1rem;
+    z-index: 5;
+}
+
+.header_socials img{
+    width: 1rem;
+    height: 1rem;
+}
+
+.cta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.cta a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cta .logo img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.header_title{
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem 0 1.5rem 0;
+}
+
+header .lead{
+    color: var(--color-white);
+    margin-bottom: 0;
+}
+
+.header_img{
+    width: 100%;
+}
+
+.cta .btn-primary{
+    border: none;
+}
+
+.cta .btn-primary:hover{
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.header_dec1{
+    background: url(/assets/dec-1.png);
+    position: absolute;
+    top: 120%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------------------- About Section -------------------- */
+
+#about{
+    margin-top: 35rem;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 9rem;
+}
+
+
+.about_article{
+    display: flex;
+    /* align-items: center; */
+    gap: 3rem;
+}
+
+.about_img{
+    flex-basis: 50%;
+}
+
+.about-text{
+    flex-basis: 50%;
+    margin-top: 2rem;
+}
+
+.about-text h2{
+    font-size: 4.2rem;
+    line-height: 4rem;
+}
+
+.about-text p{
+    margin: 1rem 0;
+}
+
+.about-text .btn-primary{
+    font-family: pp-bold;
+    font-size: 1rem;
+}
+
+/* -------------------- FAQS Section ---------------------- */
+
+.faqs_container{
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faqs{
+    display: flex;
+    background-color: var(--color-light);
+    gap: 1.5rem;
+    padding: 1.6rem 2rem;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin: 0.6rem 0;
+}
+
+.faqs:hover{
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.faqs span{
+    font-size: 2rem;
+}
+
+.faqs .faqs_ques h4{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.ans{
+    margin-top: 1rem;
+    display: none;
+}
+
+
+.faqs.open{
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    box-shadow: 0 2rem 2rem var(--color-primary-variant);
+    z-index: 1;
+    transition: all 600ms;
+}
+
+.faqs.open .ans{
+    display: block;
+}
+
+/* ----------- box ----------------- */
+
+.box{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 14rem;
+}
+
+.move-box{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-light);
+    border-radius: 50%;
+    animation-name: square;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.1,0.4,1.0,0.1);
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation: square 5s 5 alternate; */
+}
+
+@keyframes square{
+    0%{
+        
+    }
+    100%{
+        background-color: var(--color-light);
+        width: 6rem;
+        height: 6rem;
+        margin-left: 5rem;
+    }
+}
+
+
+.triangle{
+    width: 40%;
+    position: absolute;
+    top: 78rem;
+    color: var(--color-light);
+    z-index: 1000;
+    opacity: 0.3;
+    animation-name: angle;
+    animation-duration: 20s;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes angle{
+    0%{
+        transform: rotate(10deg);
+    }
+    25%{
+        transform: rotate(25deg);
+    }
+    50%{
+        transform: rotate(50deg);
+    }
+    75%{
+        transform: rotate(70deg);
+    }
+    100%{
+        transform: rotate(100deg);
+    }
+}
+
+.intro{
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50rem;
+}
+
+.intro > div button{
+    padding: 0.8rem 2rem;
+    border: 2px solid --color-light;
+    border-radius: 0.7rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.item{
+    position: absolute;
+    left: 42.5rem;
+    width: 10rem;
+    height: 10rem;
+    color: var(--color-dark) !important;
+    background-color: var(--color-white);
+    padding: 1rem;
+    box-shadow: 0 0 10px 0 #ddd;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    transition: all 3s ease;
+}
+
+.item::before{
+    content: '';
+    position: absolute;
+    top: -0.7rem;
+    left: 45%;
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: var(--color-white);
+    transform: rotate(45deg);
+    box-shadow: 0  0 10px 0 #ddd ;
+}
+
+
+.item ul{
+    list-style: none;
+}
+
+.item a{
+    color: var(--color-dark);
+}
